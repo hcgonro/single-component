@@ -1,0 +1,199 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 80% 10%;
+    background-color: #FFFFFF;
+}
+
+main .component-container {
+    display: grid; 
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    grid-template-rows: repeat(2, 50%);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+}
+
+main .component-container .first {
+    display: grid;
+    grid-row: 1 / 2;
+    background-color: #FFE3E3;
+    border-radius: 10px 10px 0 0;
+}
+
+main .component-container .first article {
+    display: grid;
+    width: 80%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+main .component-container .first article h1 {
+    grid-row: 1 / 2;
+    color: #93B5C6;
+    font-size: 30px;
+}
+
+main .component-container .first article h2 {
+    grid-row: 2 / 3;
+    color: #50CB93;
+    margin-top: 0;
+}
+
+main .component-container .first article p {
+    grid-row: 3 / 4;
+    margin-top: 0;
+    color: #93B5C6;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+main .component-container .second {
+    display: grid;
+    grid-row: 2 / 3;
+    grid-template-columns: repeat(2, 50%);
+}
+
+main .component-container .second .second-one {
+    display: grid;
+    grid-column: 1 / 2;
+    background-color: #93B5C6;
+    border-bottom-left-radius: 10px;
+}
+
+main .component-container .second .second-one article {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    width: 80%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+    color: #FFFFFF;
+}
+
+main .component-container .second .second-one article h3 {
+    font-size: medium;
+}
+
+main .component-container .second .second-one article .price {
+    margin: 0;
+}
+
+main .component-container .second .second-one article .price b {
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+main .component-container .second .second-one article .price small {
+    color: rgba(255, 255, 255, .8);
+}
+
+main .component-container .second .second-one article .price-description {
+    margin: 4px 0 0 20px;
+    font-size: 14px;
+}
+
+main .component-container .second .second-one article button {
+    color: #FFFFFF;
+    background: #70E000;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: 600;
+    transition: transform .15s;
+}
+
+main .component-container .second .second-one article button:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+main .component-container .second .second-one article button:focus {
+    transform: scale(1.04);
+    outline: none;
+}
+
+main .component-container .second .second-two {
+    display: grid;
+    grid-column: 2 / 3;
+    background-color: #C9CCD5;
+    border-bottom-right-radius: 10px;
+}
+
+main .component-container .second .second-two article {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    width: 80%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+}
+
+main .component-container .second .second-two article h3 {
+    font-size: medium;
+    color: #FFFFFF;
+}
+
+main .component-container .second .second-two article ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+    line-height: 22px;
+}
+
+/* tablet-phone */
+@media screen and (max-width: 767px){
+
+    html, body {
+        height: auto;
+    }
+
+    main {
+        grid-template-rows: 40px 1040px 40px;
+    }
+
+    main .component-container {
+        grid-template-rows: 420px 620px;
+    }
+
+    main .component-container .first article {
+        height: 100%;
+        grid-template-rows: repeat(3, 130px);
+    }
+
+    main .component-container .first article p {
+        line-height: 20px;
+        font-weight: 500;
+    }
+
+    main .component-container .second {
+        grid-template-columns: 100%;
+        grid-template-rows: 300px 320px;
+    }
+
+    main .component-container .second .second-one {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        border-radius: 0;
+        background: linear-gradient(#93B5C6, #C9CCD5);
+    }
+
+    main .component-container .second .second-two {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        border-bottom-left-radius: 10px;
+    }
+}
